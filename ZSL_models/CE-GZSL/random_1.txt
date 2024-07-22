@@ -1,0 +1,152 @@
+Epoch 0:[0/50] Loss_D: -0.7135 Loss_G: -2.5255, Wasserstein_dist: 4.2337, real_ins_contras_loss:1.3170, fake_ins_contras_loss:2.5404, cls_loss_real: 1.9189, cls_loss_fake: 3.3555 
+unseen=0.0055, seen=0.7585, h=0.0109 
+unseen class accuracy=0.4404 
+Epoch 1:[1/50] Loss_D: 0.3680 Loss_G: 3.3614, Wasserstein_dist: 2.9715, real_ins_contras_loss:1.5532, fake_ins_contras_loss:2.0065, cls_loss_real: 1.4677, cls_loss_fake: 2.9185 
+unseen=0.0011, seen=0.8325, h=0.0023 
+unseen class accuracy=0.4204 
+Epoch 2:[2/50] Loss_D: 0.7589 Loss_G: 4.9751, Wasserstein_dist: 2.7651, real_ins_contras_loss:1.3170, fake_ins_contras_loss:2.5514, cls_loss_real: 1.7684, cls_loss_fake: 1.5498 
+unseen=0.0016, seen=0.8143, h=0.0032 
+unseen class accuracy=0.3929 
+Epoch 3:[3/50] Loss_D: -0.2055 Loss_G: 5.0142, Wasserstein_dist: 2.7044, real_ins_contras_loss:2.1412, fake_ins_contras_loss:2.1080, cls_loss_real: 0.1407, cls_loss_fake: 0.0075 
+unseen=0.0023, seen=0.8472, h=0.0045 
+unseen class accuracy=0.3759 
+Epoch 4:[4/50] Loss_D: -1.2003 Loss_G: 4.9116, Wasserstein_dist: 2.5003, real_ins_contras_loss:1.0597, fake_ins_contras_loss:2.1284, cls_loss_real: 0.0505, cls_loss_fake: 0.5691 
+unseen=0.0006, seen=0.8753, h=0.0012 
+unseen class accuracy=0.3381 
+Epoch 5:[5/50] Loss_D: -0.5398 Loss_G: 6.2262, Wasserstein_dist: 2.1487, real_ins_contras_loss:1.1273, fake_ins_contras_loss:2.0222, cls_loss_real: 0.2151, cls_loss_fake: 0.3949 
+unseen=0.0005, seen=0.8892, h=0.0011 
+unseen class accuracy=0.2788 
+Epoch 6:[6/50] Loss_D: -1.1913 Loss_G: 3.4624, Wasserstein_dist: 2.2403, real_ins_contras_loss:0.8182, fake_ins_contras_loss:1.5012, cls_loss_real: 0.0832, cls_loss_fake: 0.0128 
+unseen=0.0045, seen=0.9109, h=0.0090 
+unseen class accuracy=0.3236 
+Epoch 7:[7/50] Loss_D: -1.2803 Loss_G: 3.1586, Wasserstein_dist: 2.2334, real_ins_contras_loss:0.7895, fake_ins_contras_loss:1.6428, cls_loss_real: 0.0019, cls_loss_fake: 0.0002 
+unseen=0.0032, seen=0.9371, h=0.0064 
+unseen class accuracy=0.3314 
+Epoch 8:[8/50] Loss_D: -0.3372 Loss_G: 4.8096, Wasserstein_dist: 1.9420, real_ins_contras_loss:1.3141, fake_ins_contras_loss:1.8973, cls_loss_real: 0.0036, cls_loss_fake: 0.5043 
+unseen=0.0040, seen=0.9372, h=0.0080 
+unseen class accuracy=0.4130 
+Epoch 9:[9/50] Loss_D: -0.9834 Loss_G: 4.6334, Wasserstein_dist: 2.1952, real_ins_contras_loss:0.9586, fake_ins_contras_loss:1.8459, cls_loss_real: 0.0001, cls_loss_fake: 1.0415 
+unseen=0.0141, seen=0.9389, h=0.0278 
+unseen class accuracy=0.4226 
+Epoch 10:[10/50] Loss_D: -0.4207 Loss_G: 4.4509, Wasserstein_dist: 1.9969, real_ins_contras_loss:1.4138, fake_ins_contras_loss:1.5531, cls_loss_real: 0.0337, cls_loss_fake: 0.5848 
+unseen=0.0103, seen=0.9443, h=0.0203 
+unseen class accuracy=0.3632 
+Epoch 11:[11/50] Loss_D: -0.6106 Loss_G: 4.0431, Wasserstein_dist: 1.7739, real_ins_contras_loss:1.0449, fake_ins_contras_loss:1.7487, cls_loss_real: 0.0000, cls_loss_fake: 0.0164 
+unseen=0.0025, seen=0.9385, h=0.0051 
+unseen class accuracy=0.3219 
+Epoch 12:[12/50] Loss_D: -0.2212 Loss_G: 5.5181, Wasserstein_dist: 2.2152, real_ins_contras_loss:1.4470, fake_ins_contras_loss:2.2297, cls_loss_real: 0.2572, cls_loss_fake: 1.3448 
+unseen=0.0055, seen=0.9375, h=0.0108 
+unseen class accuracy=0.3391 
+Epoch 13:[13/50] Loss_D: -1.0313 Loss_G: 3.0072, Wasserstein_dist: 1.9063, real_ins_contras_loss:0.7020, fake_ins_contras_loss:1.6189, cls_loss_real: 0.0000, cls_loss_fake: 0.0009 
+unseen=0.0102, seen=0.9286, h=0.0202 
+unseen class accuracy=0.3787 
+Epoch 14:[14/50] Loss_D: -0.3804 Loss_G: 5.7775, Wasserstein_dist: 2.3523, real_ins_contras_loss:1.4801, fake_ins_contras_loss:2.1843, cls_loss_real: 0.0002, cls_loss_fake: 1.7879 
+unseen=0.0070, seen=0.9334, h=0.0139 
+unseen class accuracy=0.3344 
+Epoch 15:[15/50] Loss_D: -0.1400 Loss_G: 4.1015, Wasserstein_dist: 1.5417, real_ins_contras_loss:1.1898, fake_ins_contras_loss:1.6002, cls_loss_real: 0.0059, cls_loss_fake: 0.2608 
+unseen=0.0125, seen=0.9380, h=0.0247 
+unseen class accuracy=0.3279 
+Epoch 16:[16/50] Loss_D: -1.3870 Loss_G: 3.6486, Wasserstein_dist: 2.0330, real_ins_contras_loss:0.5027, fake_ins_contras_loss:2.0844, cls_loss_real: 0.0006, cls_loss_fake: 3.1275 
+unseen=0.0039, seen=0.9416, h=0.0077 
+unseen class accuracy=0.3926 
+Epoch 17:[17/50] Loss_D: -0.2830 Loss_G: 3.3461, Wasserstein_dist: 1.4528, real_ins_contras_loss:1.0447, fake_ins_contras_loss:1.9401, cls_loss_real: 0.0044, cls_loss_fake: 1.2174 
+unseen=0.0030, seen=0.9402, h=0.0060 
+unseen class accuracy=0.3276 
+Epoch 18:[18/50] Loss_D: -0.9685 Loss_G: 3.9655, Wasserstein_dist: 1.7890, real_ins_contras_loss:0.5688, fake_ins_contras_loss:1.7181, cls_loss_real: 0.0000, cls_loss_fake: 1.6345 
+unseen=0.0051, seen=0.9331, h=0.0102 
+unseen class accuracy=0.3396 
+Epoch 19:[19/50] Loss_D: -0.6281 Loss_G: 3.7242, Wasserstein_dist: 1.8086, real_ins_contras_loss:0.9333, fake_ins_contras_loss:1.9303, cls_loss_real: 0.0001, cls_loss_fake: 0.5967 
+unseen=0.0078, seen=0.9307, h=0.0154 
+unseen class accuracy=0.3105 
+Epoch 20:[20/50] Loss_D: 0.4198 Loss_G: 3.0899, Wasserstein_dist: 1.9166, real_ins_contras_loss:0.8887, fake_ins_contras_loss:1.7272, cls_loss_real: 1.2482, cls_loss_fake: 0.7566 
+unseen=0.0054, seen=0.9435, h=0.0107 
+unseen class accuracy=0.3871 
+Epoch 21:[21/50] Loss_D: 0.0370 Loss_G: 3.8694, Wasserstein_dist: 1.1296, real_ins_contras_loss:0.9521, fake_ins_contras_loss:1.4604, cls_loss_real: 0.0000, cls_loss_fake: 1.2012 
+unseen=0.0114, seen=0.9334, h=0.0226 
+unseen class accuracy=0.3292 
+Epoch 22:[22/50] Loss_D: -0.4421 Loss_G: 3.3472, Wasserstein_dist: 1.3515, real_ins_contras_loss:0.7991, fake_ins_contras_loss:1.7851, cls_loss_real: -0.0000, cls_loss_fake: 0.4644 
+unseen=0.0140, seen=0.9400, h=0.0276 
+unseen class accuracy=0.3423 
+Epoch 23:[23/50] Loss_D: -0.4327 Loss_G: 5.1074, Wasserstein_dist: 1.4937, real_ins_contras_loss:0.8525, fake_ins_contras_loss:1.8011, cls_loss_real: 0.0000, cls_loss_fake: 0.0171 
+unseen=0.0091, seen=0.9467, h=0.0180 
+unseen class accuracy=0.2987 
+Epoch 24:[24/50] Loss_D: -0.8997 Loss_G: 4.3984, Wasserstein_dist: 1.6210, real_ins_contras_loss:0.5708, fake_ins_contras_loss:1.4680, cls_loss_real: 0.0000, cls_loss_fake: 0.0000 
+unseen=0.0073, seen=0.9436, h=0.0144 
+unseen class accuracy=0.3582 
+Epoch 25:[25/50] Loss_D: 0.2041 Loss_G: 4.0529, Wasserstein_dist: 1.6276, real_ins_contras_loss:1.7061, fake_ins_contras_loss:2.4747, cls_loss_real: 0.0039, cls_loss_fake: 0.4639 
+unseen=0.0201, seen=0.9456, h=0.0393 
+unseen class accuracy=0.3251 
+Epoch 26:[26/50] Loss_D: -0.3025 Loss_G: 5.0734, Wasserstein_dist: 1.6050, real_ins_contras_loss:1.1314, fake_ins_contras_loss:1.9324, cls_loss_real: 0.0000, cls_loss_fake: 0.0986 
+unseen=0.0213, seen=0.9355, h=0.0416 
+unseen class accuracy=0.3871 
+Epoch 27:[27/50] Loss_D: -0.6756 Loss_G: 2.9333, Wasserstein_dist: 1.4920, real_ins_contras_loss:0.6820, fake_ins_contras_loss:1.7377, cls_loss_real: 0.0005, cls_loss_fake: 0.0000 
+unseen=0.0056, seen=0.9358, h=0.0112 
+unseen class accuracy=0.3488 
+Epoch 28:[28/50] Loss_D: -0.0898 Loss_G: 2.4368, Wasserstein_dist: 1.2949, real_ins_contras_loss:1.0378, fake_ins_contras_loss:2.0921, cls_loss_real: -0.0000, cls_loss_fake: 1.1285 
+unseen=0.0130, seen=0.9465, h=0.0256 
+unseen class accuracy=0.3323 
+Epoch 29:[29/50] Loss_D: -0.1832 Loss_G: 3.3454, Wasserstein_dist: 1.2168, real_ins_contras_loss:0.6977, fake_ins_contras_loss:1.6935, cls_loss_real: -0.0000, cls_loss_fake: 0.7117 
+unseen=0.0175, seen=0.9390, h=0.0343 
+unseen class accuracy=0.3176 
+Epoch 30:[30/50] Loss_D: -1.0553 Loss_G: 3.2998, Wasserstein_dist: 1.6844, real_ins_contras_loss:0.5032, fake_ins_contras_loss:1.2781, cls_loss_real: -0.0000, cls_loss_fake: 0.0003 
+unseen=0.0216, seen=0.9521, h=0.0423 
+unseen class accuracy=0.3007 
+Epoch 31:[31/50] Loss_D: -0.3361 Loss_G: 2.9330, Wasserstein_dist: 1.2971, real_ins_contras_loss:0.8168, fake_ins_contras_loss:1.6633, cls_loss_real: 0.0000, cls_loss_fake: 0.0000 
+unseen=0.0125, seen=0.9478, h=0.0246 
+unseen class accuracy=0.3339 
+Epoch 32:[32/50] Loss_D: -0.3585 Loss_G: 3.1465, Wasserstein_dist: 1.2010, real_ins_contras_loss:0.6568, fake_ins_contras_loss:1.5079, cls_loss_real: -0.0000, cls_loss_fake: 0.5145 
+unseen=0.0157, seen=0.9500, h=0.0310 
+unseen class accuracy=0.3116 
+Epoch 33:[33/50] Loss_D: -0.0014 Loss_G: 4.3741, Wasserstein_dist: 1.4919, real_ins_contras_loss:1.1148, fake_ins_contras_loss:1.8193, cls_loss_real: 0.0329, cls_loss_fake: 0.4055 
+unseen=0.0081, seen=0.9463, h=0.0161 
+unseen class accuracy=0.3325 
+Epoch 34:[34/50] Loss_D: -0.2711 Loss_G: 3.5570, Wasserstein_dist: 1.4047, real_ins_contras_loss:1.0491, fake_ins_contras_loss:1.9252, cls_loss_real: -0.0000, cls_loss_fake: 2.4164 
+unseen=0.0148, seen=0.9550, h=0.0291 
+unseen class accuracy=0.3701 
+Epoch 35:[35/50] Loss_D: -0.2270 Loss_G: 3.2537, Wasserstein_dist: 1.5116, real_ins_contras_loss:1.1735, fake_ins_contras_loss:1.6933, cls_loss_real: 0.0000, cls_loss_fake: 0.5618 
+unseen=0.0130, seen=0.9536, h=0.0257 
+unseen class accuracy=0.3221 
+Epoch 36:[36/50] Loss_D: -0.0606 Loss_G: 2.8911, Wasserstein_dist: 1.0258, real_ins_contras_loss:0.8133, fake_ins_contras_loss:1.7053, cls_loss_real: 0.0136, cls_loss_fake: 2.4068 
+unseen=0.0150, seen=0.9530, h=0.0295 
+unseen class accuracy=0.3495 
+Epoch 37:[37/50] Loss_D: -0.4097 Loss_G: 2.5787, Wasserstein_dist: 1.1619, real_ins_contras_loss:0.6310, fake_ins_contras_loss:1.2325, cls_loss_real: -0.0000, cls_loss_fake: -0.0000 
+unseen=0.0177, seen=0.9366, h=0.0348 
+unseen class accuracy=0.3204 
+Epoch 38:[38/50] Loss_D: -0.2749 Loss_G: 3.7696, Wasserstein_dist: 1.3120, real_ins_contras_loss:0.9246, fake_ins_contras_loss:1.6914, cls_loss_real: -0.0000, cls_loss_fake: 6.3506 
+unseen=0.0092, seen=0.9523, h=0.0182 
+unseen class accuracy=0.2714 
+Epoch 39:[39/50] Loss_D: -0.7295 Loss_G: 2.1795, Wasserstein_dist: 1.5073, real_ins_contras_loss:0.6951, fake_ins_contras_loss:1.6754, cls_loss_real: 0.0000, cls_loss_fake: 0.0000 
+unseen=0.0153, seen=0.9433, h=0.0300 
+unseen class accuracy=0.2915 
+Epoch 40:[40/50] Loss_D: 0.2939 Loss_G: 4.6297, Wasserstein_dist: 1.0313, real_ins_contras_loss:1.1238, fake_ins_contras_loss:1.5514, cls_loss_real: 0.0000, cls_loss_fake: 2.4034 
+unseen=0.0190, seen=0.9471, h=0.0373 
+unseen class accuracy=0.3116 
+Epoch 41:[41/50] Loss_D: 0.0180 Loss_G: 3.2900, Wasserstein_dist: 1.2523, real_ins_contras_loss:1.0435, fake_ins_contras_loss:1.7646, cls_loss_real: -0.0000, cls_loss_fake: 0.0000 
+unseen=0.0171, seen=0.9544, h=0.0336 
+unseen class accuracy=0.3403 
+Epoch 42:[42/50] Loss_D: 0.1094 Loss_G: 2.4703, Wasserstein_dist: 0.9269, real_ins_contras_loss:0.8969, fake_ins_contras_loss:1.6466, cls_loss_real: -0.0000, cls_loss_fake: 0.5878 
+unseen=0.0265, seen=0.9463, h=0.0515 
+unseen class accuracy=0.3669 
+Epoch 43:[43/50] Loss_D: -0.7250 Loss_G: 1.5506, Wasserstein_dist: 1.1896, real_ins_contras_loss:0.3441, fake_ins_contras_loss:1.3028, cls_loss_real: -0.0000, cls_loss_fake: 0.0000 
+unseen=0.0164, seen=0.9321, h=0.0322 
+unseen class accuracy=0.3603 
+Epoch 44:[44/50] Loss_D: 0.0249 Loss_G: 2.4824, Wasserstein_dist: 1.0932, real_ins_contras_loss:0.9667, fake_ins_contras_loss:2.3493, cls_loss_real: -0.0000, cls_loss_fake: 2.2527 
+unseen=0.0168, seen=0.9491, h=0.0330 
+unseen class accuracy=0.3272 
+Epoch 45:[45/50] Loss_D: -0.4938 Loss_G: 4.2666, Wasserstein_dist: 1.2677, real_ins_contras_loss:0.6651, fake_ins_contras_loss:1.6841, cls_loss_real: 0.0000, cls_loss_fake: 2.2398 
+unseen=0.0159, seen=0.9583, h=0.0313 
+unseen class accuracy=0.3377 
+Epoch 46:[46/50] Loss_D: 0.4552 Loss_G: 2.7273, Wasserstein_dist: 0.7169, real_ins_contras_loss:1.0575, fake_ins_contras_loss:2.0877, cls_loss_real: -0.0000, cls_loss_fake: 2.7569 
+unseen=0.0157, seen=0.9354, h=0.0309 
+unseen class accuracy=0.3123 
+Epoch 47:[47/50] Loss_D: -0.0918 Loss_G: 1.7514, Wasserstein_dist: 1.3498, real_ins_contras_loss:1.0374, fake_ins_contras_loss:1.8167, cls_loss_real: -0.0000, cls_loss_fake: 0.0000 
+unseen=0.0148, seen=0.9455, h=0.0291 
+unseen class accuracy=0.3354 
+Epoch 48:[48/50] Loss_D: 0.0559 Loss_G: 4.3125, Wasserstein_dist: 1.2357, real_ins_contras_loss:1.0414, fake_ins_contras_loss:1.7342, cls_loss_real: -0.0000, cls_loss_fake: -0.0000 
+unseen=0.0185, seen=0.9492, h=0.0363 
+unseen class accuracy=0.3491 
+Epoch 49:[49/50] Loss_D: -0.8217 Loss_G: 1.2862, Wasserstein_dist: 1.3042, real_ins_contras_loss:0.3507, fake_ins_contras_loss:1.2083, cls_loss_real: -0.0000, cls_loss_fake: -0.0000 
+unseen=0.0186, seen=0.9600, h=0.0366 
+unseen class accuracy=0.3539 
+Best CZSL acc: 0.4403586685657501
+Best GZSL acc: 0.05152941436064759 Best acc seen: 0.9462756406506407 Best acc unseen: 0.026485850310677753

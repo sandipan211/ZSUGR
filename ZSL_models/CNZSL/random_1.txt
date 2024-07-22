@@ -1,0 +1,27 @@
+<=============== Loading data for CADDY ===============> 
+<=============== Preprocessing ===============> 
+
+<=============== Starting training ===============> 
+Training is done! Took time:  138.1 seconds 
+ZSL-U: 16.73
+GZSL-U: 16.73
+GZSL-S: 0.00
+GZSL-H: 0.00
+<=============== Loading data for CADDY ===============> 
+<=============== Preprocessing ===============> 
+
+<=============== Starting training ===============> 
+Training is done! Took time:  178.3 seconds 
+ZSL-U: 16.73
+GZSL-U: 0.00
+GZSL-S: 43.67
+GZSL-H: 0.00
+<=============== Loading data for CADDY ===============> 
+<=============== Preprocessing ===============> 
+
+<=============== Starting training ===============> 
+Training is done! Took time:  354.3 seconds 
+ZSL-U: 16.73
+GZSL-U: 9.76
+GZSL-S: 16.67
+GZSL-H: 12.31
