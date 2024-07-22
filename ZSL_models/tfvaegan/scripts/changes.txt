@@ -1,0 +1,7 @@
+changed nz from 312 to 512
+changed latent size from 312 to 512
+changed batch size to 16
+changed nclass_all to 16
+changed attSize from 312 to 512
+
+Note: we are running run_cub_tfvaegan.py

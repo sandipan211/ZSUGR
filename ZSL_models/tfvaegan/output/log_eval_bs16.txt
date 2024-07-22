@@ -1,0 +1,345 @@
+[2024-02-15 19:20:10 eval_bs16] (train_images.py 44): INFO Encoder(
+  (fc1): Linear(in_features=2560, out_features=4096, bias=True)
+  (fc3): Linear(in_features=4096, out_features=1024, bias=True)
+  (lrelu): LeakyReLU(negative_slope=0.2, inplace=True)
+  (linear_means): Linear(in_features=1024, out_features=512, bias=True)
+  (linear_log_var): Linear(in_features=1024, out_features=512, bias=True)
+)
+[2024-02-15 19:20:10 eval_bs16] (train_images.py 45): INFO Generator(
+  (fc1): Linear(in_features=1024, out_features=4096, bias=True)
+  (fc3): Linear(in_features=4096, out_features=2048, bias=True)
+  (lrelu): LeakyReLU(negative_slope=0.2, inplace=True)
+  (sigmoid): Sigmoid()
+)
+[2024-02-15 19:20:10 eval_bs16] (train_images.py 46): INFO Discriminator_D1(
+  (fc1): Linear(in_features=2560, out_features=4096, bias=True)
+  (fc2): Linear(in_features=4096, out_features=1, bias=True)
+  (lrelu): LeakyReLU(negative_slope=0.2, inplace=True)
+)
+[2024-02-15 19:20:10 eval_bs16] (train_images.py 47): INFO Feedback(
+  (fc1): Linear(in_features=4096, out_features=4096, bias=True)
+  (fc2): Linear(in_features=4096, out_features=4096, bias=True)
+  (lrelu): LeakyReLU(negative_slope=0.2, inplace=True)
+)
+[2024-02-15 19:20:10 eval_bs16] (train_images.py 48): INFO AttDec(
+  (fc1): Linear(in_features=2048, out_features=4096, bias=True)
+  (fc3): Linear(in_features=4096, out_features=512, bias=True)
+  (lrelu): LeakyReLU(negative_slope=0.2, inplace=True)
+)
+[2024-02-15 19:21:22 eval_bs16] (train_images.py 44): INFO Encoder(
+  (fc1): Linear(in_features=2560, out_features=4096, bias=True)
+  (fc3): Linear(in_features=4096, out_features=1024, bias=True)
+  (lrelu): LeakyReLU(negative_slope=0.2, inplace=True)
+  (linear_means): Linear(in_features=1024, out_features=512, bias=True)
+  (linear_log_var): Linear(in_features=1024, out_features=512, bias=True)
+)
+[2024-02-15 19:21:22 eval_bs16] (train_images.py 45): INFO Generator(
+  (fc1): Linear(in_features=1024, out_features=4096, bias=True)
+  (fc3): Linear(in_features=4096, out_features=2048, bias=True)
+  (lrelu): LeakyReLU(negative_slope=0.2, inplace=True)
+  (sigmoid): Sigmoid()
+)
+[2024-02-15 19:21:22 eval_bs16] (train_images.py 46): INFO Discriminator_D1(
+  (fc1): Linear(in_features=2560, out_features=4096, bias=True)
+  (fc2): Linear(in_features=4096, out_features=1, bias=True)
+  (lrelu): LeakyReLU(negative_slope=0.2, inplace=True)
+)
+[2024-02-15 19:21:22 eval_bs16] (train_images.py 47): INFO Feedback(
+  (fc1): Linear(in_features=4096, out_features=4096, bias=True)
+  (fc2): Linear(in_features=4096, out_features=4096, bias=True)
+  (lrelu): LeakyReLU(negative_slope=0.2, inplace=True)
+)
+[2024-02-15 19:21:22 eval_bs16] (train_images.py 48): INFO AttDec(
+  (fc1): Linear(in_features=2048, out_features=4096, bias=True)
+  (fc3): Linear(in_features=4096, out_features=512, bias=True)
+  (lrelu): LeakyReLU(negative_slope=0.2, inplace=True)
+)
+[2024-02-15 19:33:38 eval_bs16] (train_images.py 44): INFO Encoder(
+  (fc1): Linear(in_features=2560, out_features=4096, bias=True)
+  (fc3): Linear(in_features=4096, out_features=1024, bias=True)
+  (lrelu): LeakyReLU(negative_slope=0.2, inplace=True)
+  (linear_means): Linear(in_features=1024, out_features=512, bias=True)
+  (linear_log_var): Linear(in_features=1024, out_features=512, bias=True)
+)
+[2024-02-15 19:33:38 eval_bs16] (train_images.py 45): INFO Generator(
+  (fc1): Linear(in_features=1024, out_features=4096, bias=True)
+  (fc3): Linear(in_features=4096, out_features=2048, bias=True)
+  (lrelu): LeakyReLU(negative_slope=0.2, inplace=True)
+  (sigmoid): Sigmoid()
+)
+[2024-02-15 19:33:38 eval_bs16] (train_images.py 46): INFO Discriminator_D1(
+  (fc1): Linear(in_features=2560, out_features=4096, bias=True)
+  (fc2): Linear(in_features=4096, out_features=1, bias=True)
+  (lrelu): LeakyReLU(negative_slope=0.2, inplace=True)
+)
+[2024-02-15 19:33:38 eval_bs16] (train_images.py 47): INFO Feedback(
+  (fc1): Linear(in_features=4096, out_features=4096, bias=True)
+  (fc2): Linear(in_features=4096, out_features=4096, bias=True)
+  (lrelu): LeakyReLU(negative_slope=0.2, inplace=True)
+)
+[2024-02-15 19:33:38 eval_bs16] (train_images.py 48): INFO AttDec(
+  (fc1): Linear(in_features=2048, out_features=4096, bias=True)
+  (fc3): Linear(in_features=4096, out_features=512, bias=True)
+  (lrelu): LeakyReLU(negative_slope=0.2, inplace=True)
+)
+[2024-02-15 19:35:53 eval_bs16] (train_images.py 44): INFO Encoder(
+  (fc1): Linear(in_features=2560, out_features=4096, bias=True)
+  (fc3): Linear(in_features=4096, out_features=1024, bias=True)
+  (lrelu): LeakyReLU(negative_slope=0.2, inplace=True)
+  (linear_means): Linear(in_features=1024, out_features=512, bias=True)
+  (linear_log_var): Linear(in_features=1024, out_features=512, bias=True)
+)
+[2024-02-15 19:35:53 eval_bs16] (train_images.py 45): INFO Generator(
+  (fc1): Linear(in_features=1024, out_features=4096, bias=True)
+  (fc3): Linear(in_features=4096, out_features=2048, bias=True)
+  (lrelu): LeakyReLU(negative_slope=0.2, inplace=True)
+  (sigmoid): Sigmoid()
+)
+[2024-02-15 19:35:53 eval_bs16] (train_images.py 46): INFO Discriminator_D1(
+  (fc1): Linear(in_features=2560, out_features=4096, bias=True)
+  (fc2): Linear(in_features=4096, out_features=1, bias=True)
+  (lrelu): LeakyReLU(negative_slope=0.2, inplace=True)
+)
+[2024-02-15 19:35:53 eval_bs16] (train_images.py 47): INFO Feedback(
+  (fc1): Linear(in_features=4096, out_features=4096, bias=True)
+  (fc2): Linear(in_features=4096, out_features=4096, bias=True)
+  (lrelu): LeakyReLU(negative_slope=0.2, inplace=True)
+)
+[2024-02-15 19:35:53 eval_bs16] (train_images.py 48): INFO AttDec(
+  (fc1): Linear(in_features=2048, out_features=4096, bias=True)
+  (fc3): Linear(in_features=4096, out_features=512, bias=True)
+  (lrelu): LeakyReLU(negative_slope=0.2, inplace=True)
+)
+[2024-02-15 19:42:44 eval_bs16] (train_images.py 44): INFO Encoder(
+  (fc1): Linear(in_features=2560, out_features=4096, bias=True)
+  (fc3): Linear(in_features=4096, out_features=1024, bias=True)
+  (lrelu): LeakyReLU(negative_slope=0.2, inplace=True)
+  (linear_means): Linear(in_features=1024, out_features=512, bias=True)
+  (linear_log_var): Linear(in_features=1024, out_features=512, bias=True)
+)
+[2024-02-15 19:42:44 eval_bs16] (train_images.py 45): INFO Generator(
+  (fc1): Linear(in_features=1024, out_features=4096, bias=True)
+  (fc3): Linear(in_features=4096, out_features=2048, bias=True)
+  (lrelu): LeakyReLU(negative_slope=0.2, inplace=True)
+  (sigmoid): Sigmoid()
+)
+[2024-02-15 19:42:44 eval_bs16] (train_images.py 46): INFO Discriminator_D1(
+  (fc1): Linear(in_features=2560, out_features=4096, bias=True)
+  (fc2): Linear(in_features=4096, out_features=1, bias=True)
+  (lrelu): LeakyReLU(negative_slope=0.2, inplace=True)
+)
+[2024-02-15 19:42:44 eval_bs16] (train_images.py 47): INFO Feedback(
+  (fc1): Linear(in_features=4096, out_features=4096, bias=True)
+  (fc2): Linear(in_features=4096, out_features=4096, bias=True)
+  (lrelu): LeakyReLU(negative_slope=0.2, inplace=True)
+)
+[2024-02-15 19:42:44 eval_bs16] (train_images.py 48): INFO AttDec(
+  (fc1): Linear(in_features=2048, out_features=4096, bias=True)
+  (fc3): Linear(in_features=4096, out_features=512, bias=True)
+  (lrelu): LeakyReLU(negative_slope=0.2, inplace=True)
+)
+[2024-02-15 19:48:11 eval_bs16] (train_images.py 44): INFO Encoder(
+  (fc1): Linear(in_features=2560, out_features=4096, bias=True)
+  (fc3): Linear(in_features=4096, out_features=1024, bias=True)
+  (lrelu): LeakyReLU(negative_slope=0.2, inplace=True)
+  (linear_means): Linear(in_features=1024, out_features=512, bias=True)
+  (linear_log_var): Linear(in_features=1024, out_features=512, bias=True)
+)
+[2024-02-15 19:48:11 eval_bs16] (train_images.py 45): INFO Generator(
+  (fc1): Linear(in_features=1024, out_features=4096, bias=True)
+  (fc3): Linear(in_features=4096, out_features=2048, bias=True)
+  (lrelu): LeakyReLU(negative_slope=0.2, inplace=True)
+  (sigmoid): Sigmoid()
+)
+[2024-02-15 19:48:11 eval_bs16] (train_images.py 46): INFO Discriminator_D1(
+  (fc1): Linear(in_features=2560, out_features=4096, bias=True)
+  (fc2): Linear(in_features=4096, out_features=1, bias=True)
+  (lrelu): LeakyReLU(negative_slope=0.2, inplace=True)
+)
+[2024-02-15 19:48:11 eval_bs16] (train_images.py 47): INFO Feedback(
+  (fc1): Linear(in_features=4096, out_features=4096, bias=True)
+  (fc2): Linear(in_features=4096, out_features=4096, bias=True)
+  (lrelu): LeakyReLU(negative_slope=0.2, inplace=True)
+)
+[2024-02-15 19:48:11 eval_bs16] (train_images.py 48): INFO AttDec(
+  (fc1): Linear(in_features=2048, out_features=4096, bias=True)
+  (fc3): Linear(in_features=4096, out_features=512, bias=True)
+  (lrelu): LeakyReLU(negative_slope=0.2, inplace=True)
+)
+[2024-02-15 19:53:48 eval_bs16] (train_images.py 44): INFO Encoder(
+  (fc1): Linear(in_features=2560, out_features=4096, bias=True)
+  (fc3): Linear(in_features=4096, out_features=1024, bias=True)
+  (lrelu): LeakyReLU(negative_slope=0.2, inplace=True)
+  (linear_means): Linear(in_features=1024, out_features=512, bias=True)
+  (linear_log_var): Linear(in_features=1024, out_features=512, bias=True)
+)
+[2024-02-15 19:53:48 eval_bs16] (train_images.py 45): INFO Generator(
+  (fc1): Linear(in_features=1024, out_features=4096, bias=True)
+  (fc3): Linear(in_features=4096, out_features=2048, bias=True)
+  (lrelu): LeakyReLU(negative_slope=0.2, inplace=True)
+  (sigmoid): Sigmoid()
+)
+[2024-02-15 19:53:48 eval_bs16] (train_images.py 46): INFO Discriminator_D1(
+  (fc1): Linear(in_features=2560, out_features=4096, bias=True)
+  (fc2): Linear(in_features=4096, out_features=1, bias=True)
+  (lrelu): LeakyReLU(negative_slope=0.2, inplace=True)
+)
+[2024-02-15 19:53:48 eval_bs16] (train_images.py 47): INFO Feedback(
+  (fc1): Linear(in_features=4096, out_features=4096, bias=True)
+  (fc2): Linear(in_features=4096, out_features=4096, bias=True)
+  (lrelu): LeakyReLU(negative_slope=0.2, inplace=True)
+)
+[2024-02-15 19:53:48 eval_bs16] (train_images.py 48): INFO AttDec(
+  (fc1): Linear(in_features=2048, out_features=4096, bias=True)
+  (fc3): Linear(in_features=4096, out_features=512, bias=True)
+  (lrelu): LeakyReLU(negative_slope=0.2, inplace=True)
+)
+[2024-02-15 19:56:50 eval_bs16] (train_images.py 269): INFO [0/30]  Loss_D: -18.9522 Loss_G: -6.1232, Wasserstein_dist:24.9086, vae_loss_seen:1071.3744 
+[2024-02-15 20:04:48 eval_bs16] (train_images.py 44): INFO Encoder(
+  (fc1): Linear(in_features=2560, out_features=4096, bias=True)
+  (fc3): Linear(in_features=4096, out_features=1024, bias=True)
+  (lrelu): LeakyReLU(negative_slope=0.2, inplace=True)
+  (linear_means): Linear(in_features=1024, out_features=512, bias=True)
+  (linear_log_var): Linear(in_features=1024, out_features=512, bias=True)
+)
+[2024-02-15 20:04:48 eval_bs16] (train_images.py 45): INFO Generator(
+  (fc1): Linear(in_features=1024, out_features=4096, bias=True)
+  (fc3): Linear(in_features=4096, out_features=2048, bias=True)
+  (lrelu): LeakyReLU(negative_slope=0.2, inplace=True)
+  (sigmoid): Sigmoid()
+)
+[2024-02-15 20:04:48 eval_bs16] (train_images.py 46): INFO Discriminator_D1(
+  (fc1): Linear(in_features=2560, out_features=4096, bias=True)
+  (fc2): Linear(in_features=4096, out_features=1, bias=True)
+  (lrelu): LeakyReLU(negative_slope=0.2, inplace=True)
+)
+[2024-02-15 20:04:48 eval_bs16] (train_images.py 47): INFO Feedback(
+  (fc1): Linear(in_features=4096, out_features=4096, bias=True)
+  (fc2): Linear(in_features=4096, out_features=4096, bias=True)
+  (lrelu): LeakyReLU(negative_slope=0.2, inplace=True)
+)
+[2024-02-15 20:04:48 eval_bs16] (train_images.py 48): INFO AttDec(
+  (fc1): Linear(in_features=2048, out_features=4096, bias=True)
+  (fc3): Linear(in_features=4096, out_features=512, bias=True)
+  (lrelu): LeakyReLU(negative_slope=0.2, inplace=True)
+)
+[2024-02-15 20:07:54 eval_bs16] (train_images.py 269): INFO [0/30]  Loss_D: -18.9522 Loss_G: -6.1232, Wasserstein_dist:24.9086, vae_loss_seen:1071.3744 
+[2024-02-15 20:08:09 eval_bs16] (train_images.py 285): INFO GZSL: seen=0.9284, unseen=0.0084, h=0.0166 
+[2024-02-15 20:12:18 eval_bs16] (train_images.py 44): INFO Encoder(
+  (fc1): Linear(in_features=2560, out_features=4096, bias=True)
+  (fc3): Linear(in_features=4096, out_features=1024, bias=True)
+  (lrelu): LeakyReLU(negative_slope=0.2, inplace=True)
+  (linear_means): Linear(in_features=1024, out_features=512, bias=True)
+  (linear_log_var): Linear(in_features=1024, out_features=512, bias=True)
+)
+[2024-02-15 20:12:18 eval_bs16] (train_images.py 45): INFO Generator(
+  (fc1): Linear(in_features=1024, out_features=4096, bias=True)
+  (fc3): Linear(in_features=4096, out_features=2048, bias=True)
+  (lrelu): LeakyReLU(negative_slope=0.2, inplace=True)
+  (sigmoid): Sigmoid()
+)
+[2024-02-15 20:12:18 eval_bs16] (train_images.py 46): INFO Discriminator_D1(
+  (fc1): Linear(in_features=2560, out_features=4096, bias=True)
+  (fc2): Linear(in_features=4096, out_features=1, bias=True)
+  (lrelu): LeakyReLU(negative_slope=0.2, inplace=True)
+)
+[2024-02-15 20:12:18 eval_bs16] (train_images.py 47): INFO Feedback(
+  (fc1): Linear(in_features=4096, out_features=4096, bias=True)
+  (fc2): Linear(in_features=4096, out_features=4096, bias=True)
+  (lrelu): LeakyReLU(negative_slope=0.2, inplace=True)
+)
+[2024-02-15 20:12:18 eval_bs16] (train_images.py 48): INFO AttDec(
+  (fc1): Linear(in_features=2048, out_features=4096, bias=True)
+  (fc3): Linear(in_features=4096, out_features=512, bias=True)
+  (lrelu): LeakyReLU(negative_slope=0.2, inplace=True)
+)
+[2024-02-15 20:15:29 eval_bs16] (train_images.py 269): INFO [0/30]  Loss_D: -18.9522 Loss_G: -6.1232, Wasserstein_dist:24.9086, vae_loss_seen:1071.3744 
+[2024-02-15 20:15:44 eval_bs16] (train_images.py 285): INFO GZSL: seen=0.9284, unseen=0.0084, h=0.0166 
+[2024-02-15 20:15:48 eval_bs16] (train_images.py 295): INFO ZSL: unseen accuracy=0.3690
+[2024-02-15 20:18:57 eval_bs16] (train_images.py 269): INFO [1/30]  Loss_D: -13.5146 Loss_G: -7.3113, Wasserstein_dist:18.5930, vae_loss_seen:1033.9835 
+[2024-02-15 20:19:11 eval_bs16] (train_images.py 285): INFO GZSL: seen=0.9406, unseen=0.0265, h=0.0515 
+[2024-02-15 20:19:15 eval_bs16] (train_images.py 295): INFO ZSL: unseen accuracy=0.4481
+[2024-02-15 20:22:17 eval_bs16] (train_images.py 269): INFO [2/30]  Loss_D: -11.6247 Loss_G: -3.6147, Wasserstein_dist:16.4994, vae_loss_seen:1085.9128 
+[2024-02-15 20:22:31 eval_bs16] (train_images.py 285): INFO GZSL: seen=0.9413, unseen=0.0327, h=0.0631 
+[2024-02-15 20:22:36 eval_bs16] (train_images.py 295): INFO ZSL: unseen accuracy=0.4040
+[2024-02-15 20:25:36 eval_bs16] (train_images.py 269): INFO [3/30]  Loss_D: -15.3475 Loss_G: -6.9559, Wasserstein_dist:20.1277, vae_loss_seen:1033.3615 
+[2024-02-15 20:25:51 eval_bs16] (train_images.py 285): INFO GZSL: seen=0.9243, unseen=0.0467, h=0.0888 
+[2024-02-15 20:25:55 eval_bs16] (train_images.py 295): INFO ZSL: unseen accuracy=0.4458
+[2024-02-15 20:28:56 eval_bs16] (train_images.py 269): INFO [4/30]  Loss_D: -11.6954 Loss_G: -2.1628, Wasserstein_dist:15.6319, vae_loss_seen:1127.0437 
+[2024-02-15 20:29:11 eval_bs16] (train_images.py 285): INFO GZSL: seen=0.6999, unseen=0.1006, h=0.1760 
+[2024-02-15 20:29:15 eval_bs16] (train_images.py 295): INFO ZSL: unseen accuracy=0.4168
+[2024-02-15 20:31:58 eval_bs16] (train_images.py 269): INFO [5/30]  Loss_D: -10.7817 Loss_G: -3.5472, Wasserstein_dist:13.7025, vae_loss_seen:1056.3450 
+[2024-02-15 20:32:12 eval_bs16] (train_images.py 285): INFO GZSL: seen=0.8600, unseen=0.0954, h=0.1718 
+[2024-02-15 20:32:16 eval_bs16] (train_images.py 295): INFO ZSL: unseen accuracy=0.4157
+[2024-02-15 20:35:17 eval_bs16] (train_images.py 269): INFO [6/30]  Loss_D: -12.9628 Loss_G: -3.2461, Wasserstein_dist:16.3344, vae_loss_seen:1075.4731 
+[2024-02-15 20:35:31 eval_bs16] (train_images.py 285): INFO GZSL: seen=0.9285, unseen=0.0738, h=0.1367 
+[2024-02-15 20:35:36 eval_bs16] (train_images.py 295): INFO ZSL: unseen accuracy=0.4293
+[2024-02-15 20:38:36 eval_bs16] (train_images.py 269): INFO [7/30]  Loss_D: -10.5049 Loss_G: -2.6795, Wasserstein_dist:13.3961, vae_loss_seen:1104.5038 
+[2024-02-15 20:38:50 eval_bs16] (train_images.py 285): INFO GZSL: seen=0.9457, unseen=0.0535, h=0.1013 
+[2024-02-15 20:38:54 eval_bs16] (train_images.py 295): INFO ZSL: unseen accuracy=0.4265
+[2024-02-15 20:41:56 eval_bs16] (train_images.py 269): INFO [8/30]  Loss_D: -8.6226 Loss_G: -5.1674, Wasserstein_dist:11.3940, vae_loss_seen:1056.5514 
+[2024-02-15 20:42:10 eval_bs16] (train_images.py 285): INFO GZSL: seen=0.9511, unseen=0.0736, h=0.1367 
+[2024-02-15 20:42:14 eval_bs16] (train_images.py 295): INFO ZSL: unseen accuracy=0.4095
+[2024-02-15 20:45:16 eval_bs16] (train_images.py 269): INFO [9/30]  Loss_D: -10.3867 Loss_G: -4.1009, Wasserstein_dist:13.2159, vae_loss_seen:1076.5137 
+[2024-02-15 20:45:31 eval_bs16] (train_images.py 285): INFO GZSL: seen=0.9363, unseen=0.0949, h=0.1724 
+[2024-02-15 20:45:35 eval_bs16] (train_images.py 295): INFO ZSL: unseen accuracy=0.3810
+[2024-02-15 20:48:36 eval_bs16] (train_images.py 269): INFO [10/30]  Loss_D: -8.5310 Loss_G: -3.1360, Wasserstein_dist:11.0163, vae_loss_seen:1067.8652 
+[2024-02-15 20:48:50 eval_bs16] (train_images.py 285): INFO GZSL: seen=0.9533, unseen=0.0602, h=0.1132 
+[2024-02-15 20:48:54 eval_bs16] (train_images.py 295): INFO ZSL: unseen accuracy=0.3858
+[2024-02-15 20:51:54 eval_bs16] (train_images.py 269): INFO [11/30]  Loss_D: -9.7163 Loss_G: -5.7675, Wasserstein_dist:12.0339, vae_loss_seen:1040.5042 
+[2024-02-15 20:52:08 eval_bs16] (train_images.py 285): INFO GZSL: seen=0.9501, unseen=0.0610, h=0.1147 
+[2024-02-15 20:52:12 eval_bs16] (train_images.py 295): INFO ZSL: unseen accuracy=0.4320
+[2024-02-15 20:55:16 eval_bs16] (train_images.py 269): INFO [12/30]  Loss_D: -5.0662 Loss_G: -3.5513, Wasserstein_dist:8.0662, vae_loss_seen:1046.7269 
+[2024-02-15 20:55:29 eval_bs16] (train_images.py 285): INFO GZSL: seen=0.9476, unseen=0.0810, h=0.1492 
+[2024-02-15 20:55:33 eval_bs16] (train_images.py 295): INFO ZSL: unseen accuracy=0.4032
+[2024-02-15 20:58:33 eval_bs16] (train_images.py 269): INFO [13/30]  Loss_D: -5.1217 Loss_G: -2.3257, Wasserstein_dist:7.4950, vae_loss_seen:1091.0315 
+[2024-02-15 20:58:37 eval_bs16] (train_images.py 285): INFO GZSL: seen=0.9412, unseen=0.0777, h=0.1436 
+[2024-02-15 20:58:38 eval_bs16] (train_images.py 295): INFO ZSL: unseen accuracy=0.4312
+[2024-02-15 21:01:28 eval_bs16] (train_images.py 269): INFO [14/30]  Loss_D: -13.8573 Loss_G: 1.6281, Wasserstein_dist:15.6676, vae_loss_seen:1129.2268 
+[2024-02-15 21:01:43 eval_bs16] (train_images.py 285): INFO GZSL: seen=0.7653, unseen=0.1265, h=0.2172 
+[2024-02-15 21:01:46 eval_bs16] (train_images.py 295): INFO ZSL: unseen accuracy=0.3976
+[2024-02-15 21:04:44 eval_bs16] (train_images.py 269): INFO [15/30]  Loss_D: -5.2759 Loss_G: -2.3665, Wasserstein_dist:7.7659, vae_loss_seen:1041.7418 
+[2024-02-15 21:04:58 eval_bs16] (train_images.py 285): INFO GZSL: seen=0.7485, unseen=0.0887, h=0.1585 
+[2024-02-15 21:05:02 eval_bs16] (train_images.py 295): INFO ZSL: unseen accuracy=0.4017
+[2024-02-15 21:08:00 eval_bs16] (train_images.py 269): INFO [16/30]  Loss_D: -8.2759 Loss_G: -7.1140, Wasserstein_dist:10.5968, vae_loss_seen:1016.4674 
+[2024-02-15 21:08:14 eval_bs16] (train_images.py 285): INFO GZSL: seen=0.8144, unseen=0.0879, h=0.1587 
+[2024-02-15 21:08:18 eval_bs16] (train_images.py 295): INFO ZSL: unseen accuracy=0.4373
+[2024-02-15 21:11:17 eval_bs16] (train_images.py 269): INFO [17/30]  Loss_D: -8.1702 Loss_G: -2.1886, Wasserstein_dist:11.2959, vae_loss_seen:1074.4369 
+[2024-02-15 21:11:32 eval_bs16] (train_images.py 285): INFO GZSL: seen=0.9480, unseen=0.0779, h=0.1440 
+[2024-02-15 21:11:36 eval_bs16] (train_images.py 295): INFO ZSL: unseen accuracy=0.3967
+[2024-02-15 21:14:33 eval_bs16] (train_images.py 269): INFO [18/30]  Loss_D: -9.9430 Loss_G: -4.8170, Wasserstein_dist:12.3523, vae_loss_seen:1058.4017 
+[2024-02-15 21:14:48 eval_bs16] (train_images.py 285): INFO GZSL: seen=0.9458, unseen=0.0933, h=0.1698 
+[2024-02-15 21:14:52 eval_bs16] (train_images.py 295): INFO ZSL: unseen accuracy=0.4384
+[2024-02-15 21:17:51 eval_bs16] (train_images.py 269): INFO [19/30]  Loss_D: -7.1334 Loss_G: -0.7808, Wasserstein_dist:8.6136, vae_loss_seen:1127.4805 
+[2024-02-15 21:18:05 eval_bs16] (train_images.py 285): INFO GZSL: seen=0.9449, unseen=0.0781, h=0.1442 
+[2024-02-15 21:18:09 eval_bs16] (train_images.py 295): INFO ZSL: unseen accuracy=0.3845
+[2024-02-15 21:21:09 eval_bs16] (train_images.py 269): INFO [20/30]  Loss_D: -4.9916 Loss_G: -5.3808, Wasserstein_dist:6.6225, vae_loss_seen:1059.8008 
+[2024-02-15 21:21:23 eval_bs16] (train_images.py 285): INFO GZSL: seen=0.8784, unseen=0.0697, h=0.1291 
+[2024-02-15 21:21:27 eval_bs16] (train_images.py 295): INFO ZSL: unseen accuracy=0.4160
+[2024-02-15 21:24:28 eval_bs16] (train_images.py 269): INFO [21/30]  Loss_D: -7.1061 Loss_G: -1.7770, Wasserstein_dist:9.1189, vae_loss_seen:1076.6373 
+[2024-02-15 21:24:42 eval_bs16] (train_images.py 285): INFO GZSL: seen=0.7270, unseen=0.1180, h=0.2030 
+[2024-02-15 21:24:46 eval_bs16] (train_images.py 295): INFO ZSL: unseen accuracy=0.4117
+[2024-02-15 21:27:22 eval_bs16] (train_images.py 269): INFO [22/30]  Loss_D: -6.0196 Loss_G: -3.6787, Wasserstein_dist:8.4609, vae_loss_seen:1090.0352 
+[2024-02-15 21:27:37 eval_bs16] (train_images.py 285): INFO GZSL: seen=0.9454, unseen=0.0961, h=0.1745 
+[2024-02-15 21:27:41 eval_bs16] (train_images.py 295): INFO ZSL: unseen accuracy=0.4157
+[2024-02-15 21:30:42 eval_bs16] (train_images.py 269): INFO [23/30]  Loss_D: -4.7657 Loss_G: -4.1491, Wasserstein_dist:6.9021, vae_loss_seen:1038.5725 
+[2024-02-15 21:30:57 eval_bs16] (train_images.py 285): INFO GZSL: seen=0.7331, unseen=0.1427, h=0.2389 
+[2024-02-15 21:31:01 eval_bs16] (train_images.py 295): INFO ZSL: unseen accuracy=0.4298
+[2024-02-15 21:34:02 eval_bs16] (train_images.py 269): INFO [24/30]  Loss_D: -5.3860 Loss_G: -1.7307, Wasserstein_dist:7.6581, vae_loss_seen:1086.9302 
+[2024-02-15 21:34:16 eval_bs16] (train_images.py 285): INFO GZSL: seen=0.9439, unseen=0.0950, h=0.1726 
+[2024-02-15 21:34:20 eval_bs16] (train_images.py 295): INFO ZSL: unseen accuracy=0.4283
+[2024-02-15 21:37:21 eval_bs16] (train_images.py 269): INFO [25/30]  Loss_D: -7.7264 Loss_G: -2.8243, Wasserstein_dist:9.5713, vae_loss_seen:1100.9552 
+[2024-02-15 21:37:35 eval_bs16] (train_images.py 285): INFO GZSL: seen=0.9446, unseen=0.0811, h=0.1494 
+[2024-02-15 21:37:39 eval_bs16] (train_images.py 295): INFO ZSL: unseen accuracy=0.3985
+[2024-02-15 21:40:43 eval_bs16] (train_images.py 269): INFO [26/30]  Loss_D: -6.3687 Loss_G: -2.2266, Wasserstein_dist:8.1415, vae_loss_seen:1059.0021 
+[2024-02-15 21:40:55 eval_bs16] (train_images.py 285): INFO GZSL: seen=0.9349, unseen=0.0608, h=0.1142 
+[2024-02-15 21:40:59 eval_bs16] (train_images.py 295): INFO ZSL: unseen accuracy=0.4013
+[2024-02-15 21:44:07 eval_bs16] (train_images.py 269): INFO [27/30]  Loss_D: -7.2826 Loss_G: -1.2765, Wasserstein_dist:9.8408, vae_loss_seen:1097.9261 
+[2024-02-15 21:44:16 eval_bs16] (train_images.py 285): INFO GZSL: seen=0.9425, unseen=0.0847, h=0.1554 
+[2024-02-15 21:44:18 eval_bs16] (train_images.py 295): INFO ZSL: unseen accuracy=0.4491
+[2024-02-15 21:47:32 eval_bs16] (train_images.py 269): INFO [28/30]  Loss_D: -4.7715 Loss_G: -5.3160, Wasserstein_dist:6.5900, vae_loss_seen:1053.9813 
+[2024-02-15 21:47:43 eval_bs16] (train_images.py 285): INFO GZSL: seen=0.9374, unseen=0.0682, h=0.1271 
+[2024-02-15 21:47:45 eval_bs16] (train_images.py 295): INFO ZSL: unseen accuracy=0.3659
+[2024-02-15 21:50:48 eval_bs16] (train_images.py 269): INFO [29/30]  Loss_D: -6.3453 Loss_G: -3.6100, Wasserstein_dist:8.5343, vae_loss_seen:1062.9474 
+[2024-02-15 21:51:02 eval_bs16] (train_images.py 285): INFO GZSL: seen=0.9603, unseen=0.0724, h=0.1346 
+[2024-02-15 21:51:06 eval_bs16] (train_images.py 295): INFO ZSL: unseen accuracy=0.4232
