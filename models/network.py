@@ -22,7 +22,8 @@ class ZSGR(nn.Module):
         encoder_norm = LayerNorm(args.cnn_embed_dim) if normalize_before else None
         self.encoder = TransformerEncoder(encoder_layer, self.enc_layers, encoder_norm)
         self.encoder_proj = nn.Linear(args.cnn_embed_dim, clip_dim) 
-        self.encoder_text_proj = nn.Linear(args.cnn_embed_dim, args.clip_embed_dim) # 256 to 512
+        if self.args.encoder_only:
+            self.encoder_text_proj = nn.Linear(args.cnn_embed_dim, args.clip_embed_dim) # 256 to 512
 
         
         # cross-attention related
@@ -69,7 +70,8 @@ class ZSGR(nn.Module):
             self.gesture_class_embedding = nn.Linear(args.clip_embed_dim, len(self.seen_labels))
 
         # this is a separate classifier initialized with weights of all class semantics to see what results we get using [CLS] token of CLIP
-        self.clip_token_cls = self.all_semantics / self.all_semantics.norm(dim=-1, keepdim=True)
+        self.clip_text_ftrs_all = self.all_semantics / self.all_semantics.norm(dim=-1, keepdim=True)
+        self.clip_text_ftrs_unseen = self.unseen_semantics / self.unseen_semantics.norm(dim=-1, keepdim=True)
 
         # clip_label=all_semantics, hoi_text=seen_labels, train_clip_label=seen_semantics = \
         #     self.init_classifier_with_CLIP()
@@ -150,6 +152,14 @@ class ZSGR(nn.Module):
             produce = {
             'pred_gesture_logits': torch.mean(outputs_gesture_class, dim=1),
             'gcat_feature': torch.mean(gcat_output, dim=1)
+            }
+        elif self.args.method == "clip_linear_probe":
+            logit_scale = self.logit_scale.exp()
+            logits_per_image_all = logit_scale * clip_cls_feature @ self.clip_text_ftrs_all.t()
+            logits_per_image_unseen = logit_scale * clip_cls_feature @ self.clip_text_ftrs_unseen.t()
+            produce = {
+                'logits_per_image_all' : logits_per_image_all,
+                'logits_per_image_unseen' : logits_per_image_unseen
             }
         else:
             produce = {
