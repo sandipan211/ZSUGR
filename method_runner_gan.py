@@ -70,7 +70,9 @@ def get_data(args):
     path = os.path.join(args.datadir, '{}_{}'.format(args.split_type,args.split_number))
     if args.use_resnet:
         path = path = os.path.join(path, f'feature_map_ResNet_101_CADDY_2048.hdf5')
-    else:
+    elif args.use_clip:
+        path = os.path.join(path, f'clip_cls_features_{args.setting}.hdf5')
+    elif args.use_gcat:
         path = os.path.join(path, f'gcat_features_{args.setting}.hdf5')
 
     print('_____')

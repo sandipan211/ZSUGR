@@ -18,7 +18,10 @@ from torchvision import datasets, transforms
 import method_runner
 
 def extract_features(args, dataloaders):
-    save_path_train = f'/workspace/arijit/sandipan/zsgr_caddy/hariansh/data/CADDY/{args.split_type}_{args.split_number}/gcat_features_{args.setting}.hdf5' 
+    if args.method == "preprocessing":
+        save_path_train = f'/workspace/arijit/sandipan/zsgr_caddy/hariansh/data/CADDY/{args.split_type}_{args.split_number}/gcat_features_{args.setting}.hdf5' 
+    elif args.method == "preprocessing_clip":
+        save_path_train = f'/workspace/arijit/sandipan/zsgr_caddy/hariansh/data/CADDY/{args.split_type}_{args.split_number}/clip_cls_features_ablation_clip_cgan.hdf5' 
 
     sentence_features = method_runner.get_sentence_embeddings()
     dataset_loader_train = dataloaders['train']
@@ -27,7 +30,7 @@ def extract_features(args, dataloaders):
     # dir = args.dirs[f'{args.our_method_type}_{args.split_type}_{args.split_number}']
     # os.path.join(args.root, args.output_dir)
     offline_gcat_ckpt_path = os.path.join(args.root, args.output_dir, 'ours', args.our_method_type, args.split_type + '_' + str(args.split_number), args.setting+'_'+args.best_ckpt)
-    # print(offline_gcat_ckpt_path)
+    print(offline_gcat_ckpt_path)
     # offline_gcat_ckpt_path = '/workspace/arijit/sandipan/zsgr_caddy/hariansh/output_dir/ours/GCAT/random_2/lr_1e-5_3dec_withLN_checkpoint_best.pth'
 
     device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
@@ -46,7 +49,10 @@ def extract_features(args, dataloaders):
             labels = targets['label']
             clip_input = targets['clip_inputs'].to(device)
             features = gcat_model(inputs,is_training=False, clip_input=clip_input)
-            features = features['gcat_feature']
+            if args.method == "preprocessing":
+                features = features['gcat_feature']
+            elif args.method == "preprocessing_clip":
+                features = features['clip_cls_feature']
             features = torch.squeeze(features)
             all_features_train.append(features.cpu().numpy())
             labels_train.append(labels.cpu().numpy())
@@ -61,7 +67,10 @@ def extract_features(args, dataloaders):
             labels = targets['label']
             clip_input = targets['clip_inputs'].to(device)
             features = gcat_model(inputs,is_training=False, clip_input=clip_input)
-            features = features['gcat_feature']
+            if args.method == "preprocessing":
+                features = features['gcat_feature']
+            elif args.method == "preprocessing_clip":
+                features = features['clip_cls_feature']
             features = torch.squeeze(features)
             all_features_test_seen.append(features.cpu().numpy())
             labels_test_seen.append(labels.cpu().numpy())
@@ -76,7 +85,10 @@ def extract_features(args, dataloaders):
             labels = targets['label']
             clip_input = targets['clip_inputs'].to(device)
             features = gcat_model(inputs,is_training=False, clip_input=clip_input)
-            features = features['gcat_feature']
+            if args.method == "preprocessing":
+                features = features['gcat_feature']
+            elif args.method == "preprocessing_clip":
+                features = features['clip_cls_feature']
             features = torch.squeeze(features)
             all_features_test_unseen.append(features.cpu().numpy())
             labels_test_unseen.append(labels.cpu().numpy())

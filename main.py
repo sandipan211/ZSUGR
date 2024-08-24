@@ -51,7 +51,7 @@ def setup_dirs(args):
     op_dir_path = os.path.join(args.root, args.output_dir)
     create_dir('output directory', op_dir_path, dir_paths)
     # make method directory
-    if args.method != 'preprocessing':
+    if args.method != 'preprocessing' or args.method!= 'preprocessing_clip':
         method_path = os.path.join(op_dir_path, args.method)
         create_dir(f'{args.method} directory', method_path, dir_paths)
 
@@ -75,7 +75,7 @@ def setup_dirs(args):
         create_dir(f'{args.existing_zsl_type} directory', existing_zsl_type_path, dir_paths)
         result_path = os.path.join(existing_zsl_type_path, args.split_type + '_' + str(args.split_number))
         create_dir(f'{args.existing_zsl_type} {args.split_type} {args.split_number} directory', result_path, dir_paths)
-    elif args.method == 'preprocessing':
+    elif args.method == 'preprocessing' or args.method == 'preprocessing_clip':
         pass
     else:
         raise ValueError(f'Method {args.method} not supported')
@@ -175,6 +175,9 @@ def args_GAN(parser, remaining_args, args):
     parser.add_argument('--pretrain_classifier',type=str,default='')
     parser.add_argument('--cls_weight',type=float,default=0.001)
     parser.add_argument('--use_resnet',action='store_true',default=False, help='Use ResNet Features')
+    parser.add_argument('--use_gcat', action='store_true', help='enbale MinMaxScaler on visual features')
+    parser.add_argument('--use_clip', action='store_true', help='enbale MinMaxScaler on visual features')
+
     ###
 
     args = parser.parse_args(remaining_args, namespace=args)
@@ -457,7 +460,8 @@ def get_args_parser():
     parser.add_argument('--class_embedding', default='att')
     parser.add_argument('--syn_num', type=int, default=300, help='number features to generate per class')
     parser.add_argument('--gzsl', action='store_true', default=True, help='enable generalized zero-shot learning')
-    parser.add_argument('--preprocessing', action='store_true', default=True, help='enbale MinMaxScaler on visual features')
+    parser.add_argument('--preprocessing', action='store_true', help='enbale MinMaxScaler on visual features')
+    parser.add_argument('--preprocessing_clip', action='store_true', help='enbale MinMaxScaler on visual features')
     parser.add_argument('--standardization', action='store_true', default=False)
     parser.add_argument('--resSize', type=int, default=2048, help='size of visual features')
     parser.add_argument('--attSize', type=int, default=512, help='size of semantic features')
@@ -642,7 +646,11 @@ def main(args):
     if args.method == "ours" and args.our_method_type == "GCAT":
         method_runner.our_method(datasets, dataloaders, args)
         return
-    elif args.method == "preprocessing":
+    elif args.method == "clip_linear_probe":
+        print("Clip linear probe in main.py")
+        method_runner.our_method(datasets, dataloaders, args)
+        return
+    elif args.method == "preprocessing" or args.method == "preprocessing_clip":
         extract_features(args, dataloaders)
         return
     else:

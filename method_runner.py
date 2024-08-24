@@ -101,6 +101,8 @@ def our_method(datasets,dataloaders,args):
         f.write('\n = = = = = = = = Vision Transformer = = = = = = = = \n' )
     elif args.our_method_type == 'GCAT':
         f.write('\n = = = = = = = = GCAT model = = = = = = = = \n' )
+    elif args.method == 'clip_linear_probe':
+        f.write('\n = = = = = = = = clip_linear_probe model = = = = = = = = \n' )
 
     dataset_sizes = {x: len(datasets[x]) for x in ['train', 'test_seen', 'test_unseen']}
     sentence_features = get_sentence_embeddings()
@@ -170,109 +172,119 @@ def our_method(datasets,dataloaders,args):
 
             lr_scheduler = torch.optim.lr_scheduler.MultiStepLR(optimizer, milestones=[args.lr_drop], gamma=args.lr_drop_gamma)
 
-    elif args.method == 'clip_linear_probe':
-        model = CLIPClassifier(args, 512).to(device)
-
-    ckpt_path = os.path.join(dir, args.setting+'_'+args.resume)
-    best_ckpt_path = os.path.join(dir, args.setting+'_'+args.best_ckpt)
-    if args.resume and os.path.exists(ckpt_path):
-        checkpoint = load_ckpt(args, ckpt_path, optimizer, lr_scheduler)
-        print(f'Loaded checkpoint from {ckpt_path}')
-        model.load_state_dict(checkpoint['model'])
-        start_epoch = checkpoint['epoch'] + 1
-    else:
-        start_epoch = 0
-
-    if os.path.exists(best_ckpt_path):
-        best_checkpoint = load_ckpt(args, best_ckpt_path, optimizer, lr_scheduler)
-        best_performance = best_checkpoint['performance_stats']
-    else:
-        # TODO: make best scores for acc_seen, acc_unseen, acc_H, too
-        # best_performance = {
-        #     'acc_novel': 0.0,
-        #     'acc_seen': 0.0,
-        #     'acc_unseen': 0.0,
-        #     'HM': 0.0
-        # }
-        best_performance = {
-            'acc_seen': 0.0,
-            'acc_unseen': 0.0,
-            'HM': 0.0
-        }
 
 
-    since = time.time()
-    args.unseen_labels = args.split_labels['test_unseen']
-    # best_acc = 0.0
-    # best_H = 0.0 
-    # best_seen_acc = 0.0
-    # best_unseen_acc = 0.0
-    for epoch in range(start_epoch, num_epochs):
-        epoch_since = time.time()
-        # f.write('-' * 10)
-        # Each epoch has a training and validation phase
-        for phase in ['train', 'test_unseen']:
-            if phase == 'train':
-                # return avg loss
-                avg_loss = TV.train_one_epoch(epoch,device, model, dataloaders[phase],optimizer,lr_scheduler,f,sentence_features, args)  # Set model to training mode
 
+            ckpt_path = os.path.join(dir, args.setting+'_'+args.resume)
+            best_ckpt_path = os.path.join(dir, args.setting+'_'+args.best_ckpt)
+            if args.resume and os.path.exists(ckpt_path):
+                checkpoint = load_ckpt(args, ckpt_path, optimizer, lr_scheduler)
+                print(f'Loaded checkpoint from {ckpt_path}')
+                model.load_state_dict(checkpoint['model'])
+                start_epoch = checkpoint['epoch'] + 1
             else:
-                # acc1_avg, _ = TV.val_czsl(device, dataloaders[phase], model)   # Set model to evaluate mode
-                H, acc_seen, _, acc_unseen, _ = TV.val_gzsl(device, dataloaders, model)
-                epoch_time = time.time() - epoch_since
-                f.write(f'Epoch {epoch+1}/{num_epochs} ')
-                # f.write(f'acc_czsl = {acc1_avg*100} ')
-                f.write(f'loss={avg_loss} H={H*100} acc_gzsl: acc_seen={acc_seen*100} acc_unseen={acc_unseen*100}\n')
-                print(f'Epoch [{epoch+1}/{num_epochs}] loss: {avg_loss} H: {H*100: .6f} acc_seen: {acc_seen*100: .6f} acc_unseen: {acc_unseen*100: .6f} time: {epoch_time // 60:.0f}m {epoch_time % 60:.0f}s')
-                # print(f'Epoch [{epoch+1}/{num_epochs}] loss: {avg_loss} acc_czsl: {acc1_avg*100: .6f} H: {H*100: .6f} acc_seen: {acc_seen*100: .6f} acc_unseen: {acc_unseen*100: .6f} time: {epoch_time // 60:.0f}m {epoch_time % 60:.0f}s')
-            
-            lr_scheduler.step()
+                start_epoch = 0
 
-            if phase == 'test_unseen' and H > best_performance['HM']:
-                best_performance['acc_seen']=acc_seen
-                best_performance['acc_unseen']=acc_unseen
-                best_performance['HM'] = H
-                deep_copy = {'avg_loss': avg_loss, 
-                             'model': model.state_dict(), 
-                             'optimizer': optimizer.state_dict(),
-                             'lr_scheduler': lr_scheduler.state_dict(),
-                             'epoch': epoch, 
-                             'performance_stats': best_performance,
-                             'args': args
-                             }
-                torch.save(deep_copy, best_ckpt_path)
+            if os.path.exists(best_ckpt_path):
+                best_checkpoint = load_ckpt(args, best_ckpt_path, optimizer, lr_scheduler)
+                best_performance = best_checkpoint['performance_stats']
+            else:
+                # TODO: make best scores for acc_seen, acc_unseen, acc_H, too
+                # best_performance = {
+                #     'acc_novel': 0.0,
+                #     'acc_seen': 0.0,
+                #     'acc_unseen': 0.0,
+                #     'HM': 0.0
+                # }
+                best_performance = {
+                    'acc_seen': 0.0,
+                    'acc_unseen': 0.0,
+                    'HM': 0.0
+                }
 
-            
-            # save current epoch ckpt
-            if phase == 'test_unseen':
-                torch.save({
-                    'avg_loss': avg_loss,
-                    'model': model.state_dict(),
-                    'optimizer': optimizer.state_dict(),
-                    'lr_scheduler': lr_scheduler.state_dict(),
-                    'epoch': epoch, 
-                    # 'performance_stats': {
-                    #     'acc_novel': acc1_avg,
-                    #     'acc_seen': acc_seen,
-                    #     'acc_unseen': acc_unseen,
-                    #     'HM': H
 
-                    # },
-                    'performance_stats': {
-                        'acc_seen': acc_seen,
-                        'acc_unseen': acc_unseen,
-                        'HM': H
-                    },
-                    'args': args           
-                }, ckpt_path)
+            since = time.time()
+            args.unseen_labels = args.split_labels['test_unseen']
+            # best_acc = 0.0
+            # best_H = 0.0 
+            # best_seen_acc = 0.0
+            # best_unseen_acc = 0.0
+            for epoch in range(start_epoch, num_epochs):
+                epoch_since = time.time()
+                # f.write('-' * 10)
+                # Each epoch has a training and validation phase
+                for phase in ['train', 'test_unseen']:
+                    if phase == 'train':
+                        # return avg loss
+                        avg_loss = TV.train_one_epoch(epoch,device, model, dataloaders[phase],optimizer,lr_scheduler,f,sentence_features, args)  # Set model to training mode
 
-    time_elapsed = time.time() - since
-    print(f"\nBest GZSL: H={best_performance['HM']*100} acc_seen={best_performance['acc_seen']*100} acc_unseen={best_performance['acc_unseen']*100}")
-    # print(f"Best CZSL: acc_czsl={best_performance['acc_novel']*100}")
-    print(f"\nTraining complete in {time_elapsed // 60:.0f}m {time_elapsed % 60:.0f}s")
+                    else:
+                        # acc1_avg, _ = TV.val_czsl(device, dataloaders[phase], model)   # Set model to evaluate mode
+                        H, acc_seen, _, acc_unseen, _ = TV.val_gzsl(device, dataloaders, model)
+                        epoch_time = time.time() - epoch_since
+                        f.write(f'Epoch {epoch+1}/{num_epochs} ')
+                        # f.write(f'acc_czsl = {acc1_avg*100} ')
+                        f.write(f'loss={avg_loss} H={H*100} acc_gzsl: acc_seen={acc_seen*100} acc_unseen={acc_unseen*100}\n')
+                        print(f'Epoch [{epoch+1}/{num_epochs}] loss: {avg_loss} H: {H*100: .6f} acc_seen: {acc_seen*100: .6f} acc_unseen: {acc_unseen*100: .6f} time: {epoch_time // 60:.0f}m {epoch_time % 60:.0f}s')
+                        # print(f'Epoch [{epoch+1}/{num_epochs}] loss: {avg_loss} acc_czsl: {acc1_avg*100: .6f} H: {H*100: .6f} acc_seen: {acc_seen*100: .6f} acc_unseen: {acc_unseen*100: .6f} time: {epoch_time // 60:.0f}m {epoch_time % 60:.0f}s')
+                    
+                    lr_scheduler.step()
 
-    f.write(f"\n\nBest GZSL: H={best_performance['HM']*100} acc_seen={best_performance['acc_seen']*100} acc_unseen={best_performance['acc_unseen']*100}")
-    # f.write(f"\nBest CZSL: acc_czsl={best_performance['acc_novel']*100}")
-    f.write(f"\nTraining complete in {time_elapsed // 60:.0f}m {time_elapsed % 60:.0f}s")
-    f.close()
+                    if phase == 'test_unseen' and H > best_performance['HM']:
+                        best_performance['acc_seen']=acc_seen
+                        best_performance['acc_unseen']=acc_unseen
+                        best_performance['HM'] = H
+                        deep_copy = {'avg_loss': avg_loss, 
+                                    'model': model.state_dict(), 
+                                    'optimizer': optimizer.state_dict(),
+                                    'lr_scheduler': lr_scheduler.state_dict(),
+                                    'epoch': epoch, 
+                                    'performance_stats': best_performance,
+                                    'args': args
+                                    }
+                        torch.save(deep_copy, best_ckpt_path)
+
+                    
+                    # save current epoch ckpt
+                    if phase == 'test_unseen':
+                        torch.save({
+                            'avg_loss': avg_loss,
+                            'model': model.state_dict(),
+                            'optimizer': optimizer.state_dict(),
+                            'lr_scheduler': lr_scheduler.state_dict(),
+                            'epoch': epoch, 
+                            # 'performance_stats': {
+                            #     'acc_novel': acc1_avg,
+                            #     'acc_seen': acc_seen,
+                            #     'acc_unseen': acc_unseen,
+                            #     'HM': H
+
+                            # },
+                            'performance_stats': {
+                                'acc_seen': acc_seen,
+                                'acc_unseen': acc_unseen,
+                                'HM': H
+                            },
+                            'args': args           
+                        }, ckpt_path)
+
+            time_elapsed = time.time() - since
+            print(f"\nBest GZSL: H={best_performance['HM']*100} acc_seen={best_performance['acc_seen']*100} acc_unseen={best_performance['acc_unseen']*100}")
+            # print(f"Best CZSL: acc_czsl={best_performance['acc_novel']*100}")
+            print(f"\nTraining complete in {time_elapsed // 60:.0f}m {time_elapsed % 60:.0f}s")
+
+            f.write(f"\n\nBest GZSL: H={best_performance['HM']*100} acc_seen={best_performance['acc_seen']*100} acc_unseen={best_performance['acc_unseen']*100}")
+            # f.write(f"\nBest CZSL: acc_czsl={best_performance['acc_novel']*100}")
+            f.write(f"\nTraining complete in {time_elapsed // 60:.0f}m {time_elapsed % 60:.0f}s")
+            f.close()
+
+    elif args.method == 'clip_linear_probe':
+        model = network.build(args, sentence_features).to(device)
+        H, acc_seen, _, acc_unseen, _ = TV.val_gzsl_clip(device, dataloaders, model)
+
+        print(f"\nBest GZSL: H={H*100} acc_seen={acc_seen*100} acc_unseen={acc_unseen*100}")
+        # print(f"Best CZSL: acc_czsl={best_performance['acc_novel']*100}")
+        f.write(f"\n\nBest GZSL: H={H*100} acc_seen={acc_seen*100} acc_unseen={acc_unseen*100}")
+        # f.write(f"\nBest CZSL: acc_czsl={best_performance['acc_novel']*100}")
+        f.close()
 #-----------
