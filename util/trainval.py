@@ -158,6 +158,53 @@ def val(val_loader, device, model, classes):
 
     return acc, acc_per_class
 
+def val_gzsl_clip(device, val_loader, model):
+    # assuming val_loader to be dictionary having two dataloaders 'test_seen' and 'test_unseen'
+    # unseen classes must be a list of unseen classes
+    model.eval()
+    print("Evaluating clip")
+    
+    acc_seen, acc_per_class_seen = val_clip(val_loader['test_seen'], device, model, model.seen_labels)
+    acc_unseen, acc_per_class_unseen = val_clip(val_loader['test_unseen'], device, model, model.unseen_labels)
+    H = 2*acc_seen*acc_unseen / (acc_seen+acc_unseen)
+    acc_per_class_seen = update_keys(acc_per_class_seen)
+    acc_per_class_unseen = update_keys(acc_per_class_unseen)
+    # return mean (seen, unseen) accuracy
+    # return HM
+    # return classwise seen accs, classwise unseen accs (dicts)
+    return H, acc_seen, acc_per_class_seen, acc_unseen, acc_per_class_unseen
+
+def val_clip(val_loader, device, model, classes):
+    model.eval()
+    predicted_labels_list = []
+    true_labels_list = []
+    with torch.no_grad():
+        for inputs, targets in val_loader:
+            inputs = inputs.to(device)
+            gt_labels = targets['label'].to(device)
+            clip_input = targets['clip_inputs'].to(device)
+            b, _ , _ , _ = inputs.size()
+            outputs = model(inputs, is_training=False, clip_input=clip_input)
+            # TODO: should we compute sigmoid? or will softmax do? Remember that we have not used signoid during loss calculation in training
+            # gesture_scores = outputs['pred_gesture_logits'].sigmoid()
+            # check the line below
+            # pred_labels = F.softmax(outputs['pred_gesture_logits'], -1)[..., :-1].max(-1)[1]
+            pred_labels = F.softmax(outputs['logits_per_image_all'],-1)
+            pred_labels = torch.argmax(pred_labels , dim=-1)
+            predicted_labels_list.append(pred_labels)
+            true_labels_list.append(gt_labels)
+
+    predicted_labels = torch.cat(predicted_labels_list, dim=0)
+    true_labels = torch.cat(true_labels_list, dim =0)
+    acc_per_class = compute_per_class_acc(true_labels, predicted_labels, classes)
+    acc = 0.0
+    for key,value in acc_per_class.items():
+        acc += value
+    acc/= len(acc_per_class)
+
+    return acc, acc_per_class
+
+
 # @torch.no_grad()
 # def validate(device, val_loader, model, f, sentence_features, args):
 #     model.eval()
