@@ -1,2 +1,5 @@
-# ZSUGR
-The first work on zero-shot underwater gesture recognition
+# Zero-Shot Underwater Gesture Recognition (ICPR 2024)
+
+## 👓 At a glance
+This repository contains the official PyTorch implementation of our paper : Zero-Shot Underwater Gesture Recognition, a work done by Sandipan Sarma, Gundameedi Sai Ram Mohan, Hariansh Sehgal, and Arijit Sur at [Indian Institute of Technology Guwahati](https://www.iitg.ac.in/cse/). The work has been recently published in the proceedings of the [27th International Conference on Pattern Recognition (ICPR) 2024](https://icpr2024.org/).
+
