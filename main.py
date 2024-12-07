@@ -405,24 +405,6 @@ def args_haszsl(parser, remaining_args,args):
     args.eps = args.weight_perturb/255.
 
 
-    # define attribute groups
-    # if args.dataset == 'CUB':
-    #     args.parts = ['head', 'belly', 'breast', 'belly', 'wing', 'tail', 'leg', 'others']
-    #     args.group_dic = json.load(open(os.path.join(args.root, 'data', args.dataset, 'attri_groups_8.json')))
-    #     args.sub_group_dic = json.load(open(os.path.join(args.root, 'data', args.dataset, 'attri_groups_8_layer.json')))
-    #     args.resnet_path = '../pretrained_models/resnet101_c.pth.tar'
-    # elif args.dataset == 'AWA2':
-    #     args.parts = ['color', 'texture', 'shape', 'body_parts', 'behaviour', 'nutrition', 'activativity', 'habitat',
-    #             'character']
-    #     args.group_dic = json.load(open(os.path.join(args.root, 'data', args.dataset, 'attri_groups_9.json')))
-    #     args.sub_group_dic = {}
-    #     args.resnet_path = '../pretrained_models/resnet101-5d3b4d8f.pth'
-    # elif args.dataset == 'SUN':
-    #     args.parts = ['functions', 'materials', 'surface_properties', 'spatial_envelope']
-    #     args.group_dic = json.load(open(os.path.join(args.root, 'data', args.dataset, 'attri_groups_4.json')))
-    #     args.sub_group_dic = {}
-    #     args.resnet_path = '../pretrained_models/resnet101_sun.pth.tar'        opt.resnet_path = './pretrained_models/resnet101-5d3b4d8f.pth'
-
     args.resnet_path = '/workspace/arijit/sandipan/zsgr_caddy/hariansh/ZSL_models/HASZSL/pretrained_models/resnet101-5d3b4d8f.pth'
 
     args.reg_weight = {'final': {'xe': args.xe, 'attri': args.attri},
@@ -533,17 +515,7 @@ def get_args_parser():
     args.decoder_layer_sizes[-1] = args.resSize
     args.latent_size = args.attSize
 
-    # parser.add_argument('--num_cross_attention_layers', default=3, action='store_true')
-    # parser.add_argument('--wandb_enable', default=False, action='store_true')
-    # parser.add_argument('--concat_v_fo', action='store_true')
-    # parser.add_argument('--gated_cross_attn', action='store_true')
-    # parser.add_argument('--rho_eps', default=1e-14, type=float)
-    # parser.add_argument('--hc_eps', default=1e-7, type=float)
-    # parser.add_argument('--kappa', default=2.0, type=float)
-    # parser.add_argument('--conceptnet_path', default="",type=str)
-    # parser.add_argument('--proposed_loss', action='store_true')
-    # parser.add_argument('--extend_lr_drop_list', action='store_true')
-    # parser.add_argument('--rel_alpha', default=0.5, type=float)
+
     print(args)
     return args
 
@@ -570,11 +542,7 @@ def main(args):
         train_DGZ.train_dgz(args)
         return
 
-    # split naming conventions:
-    # [X]_[Y]_[num].csv =>, where:
-    # [X] = seen or unseen
-    # [Y] = random or RF or NF
-    # [num] = 1, 2, 3.... if X = random else 0
+
 
     train_split_name = 'train_' + args.split_type + '_' + str(args.split_number) 
     test_seen_split_name = 'test_seen_' + args.split_type + '_' + str(args.split_number) 
