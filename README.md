@@ -64,5 +64,17 @@ The following command will run the train-test part of our GAN:
 cd scripts
 sh train_GAN.sh
 ```
+Note: The argument ``our_method_type`` should be set to "GAN".
 
-## More updates: Coming soon!
+# :gift: Citation
+If you use our work for your research, kindly star :star: our repository and consider citing our work using the following BibTex:
+```
+@inproceedings{sarma2025zero,
+  title={Zero-Shot Underwater Gesture Recognition},
+  author={Sarma, Sandipan and Sai Ram Mohan, Gundameedi and Sehgal, Hariansh and Sur, Arijit},
+  booktitle={International Conference on Pattern Recognition},
+  pages={346--361},
+  year={2025},
+  organization={Springer}
+}
+```
