@@ -29,6 +29,12 @@ datasets
 │   └───...
 
 ```
+## 🚄 Training
+The dependencies can be installed by creating an Anaconda environment using zsugr.yml in the following command:
 
+```bash
+conda env create -f zsugr.yml
+conda activate zsugr
+```
 
 ## More updates: Coming soon!
