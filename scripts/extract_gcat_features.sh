@@ -2,7 +2,7 @@ CUDA_VISIBLE_DEVICES=0 OMP_NUM_THREADS=4  python ../main.py \
     --image_folder raw_dataset_caddy \
     --method preprocessing \
     --our_method_type GCAT \
-    --split_number 4 \
+    --split_number 1 \
     --split_type random \
     --batch_size 16 \
     --epochs 50 \
