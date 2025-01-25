@@ -52,7 +52,7 @@ In ``train_random.sh``, a few important arguments that need explanation are:
 - ``setting``: Used for creating files with a unique name and helpful for saving logs of different versions of the framework you try. Set it as you like. We last kept it as "lr_1e-5_3dec_withLN".
 
 ## 📤 Extract gesture features 
-After the transformer is trained, manually make a folder called data in your ``root`` directory, and inside it, make a folder with the dataset name (currently CADDY). Make corresponding changes in line 21 of preprocessing_gcat.py. Then run the following script:
+After the transformer is trained, manually make a folder called data in your ``root`` directory, and inside it, make a folder with the dataset name (currently CADDY). Make corresponding changes in line 22 of preprocessing_gcat.py. Then run the following script:
 ```bash
 cd scripts
 sh extract_gact_features.sh
