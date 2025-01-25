@@ -10,7 +10,7 @@ CUDA_VISIBLE_DEVICES=0 OMP_NUM_THREADS=4  python ../main.py \
     --lr_drop 10 \
     --lr 1e-5 \
     --num_cross_attention_layers 3 \
-    --setting ablation_encoder_only \
+    --setting lr_1e-5_3dec_withLN \
     --resume checkpoint_last.pth \
     --best_ckpt checkpoint_best.pth \
     --with_clip_label \
