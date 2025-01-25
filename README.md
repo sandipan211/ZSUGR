@@ -29,12 +29,29 @@ datasets
 │   └───...
 
 ```
+**Note**: Due to some file corruption, we had to rename some of the split files during experimentation. The split numbered 1, 2, and 3 in the paper correspond to the .csv files ending with 1, 4, and 5, respectively.
+
 ## 🚄 Training
 The dependencies can be installed by creating an Anaconda environment using zsugr.yml in the following command:
 
 ```bash
 conda env create -f zsugr.yml
-conda activate zsugr
+conda activate zsgr
 ```
+
+## 🚅 Step 1: Train transformer
+```bash
+cd scripts
+sh train_random.sh
+```
+In ``train_random.sh``, a few important arguments that need explanation are:
+- ``method``: Should always be set to "ours"
+- ``our_method_type``: Should always be set to "GCAT" (corresponds to the entire proposed framework)
+- ``root``: Should be set to your own root directory where you clone this repository
+- ``split_type``: Should always be set to "random"
+- ``setting``: Used for creating files with a unique name and helpful for saving logs of different versions of the framework you try. Set it as you like. We last kept it as "lr_1e-5_3dec_withLN".
+
+## 📤 Step 2: Extract gesture features 
+
 
 ## More updates: Coming soon!
